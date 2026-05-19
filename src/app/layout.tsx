@@ -14,8 +14,35 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MalikaTech | Solusi Digital Cerdas",
-  description: "MalikaTech membangun aplikasi web skalabel, sistem antrean, platform tiket, dan solusi layanan publik terintegrasi yang dirancang untuk era modern.",
+  title: "MalikaTech | Solusi Digital Cerdas & Transformasi Layanan Publik",
+  description: "MalikaTech membangun aplikasi web skalabel, sistem antrean (QNext), platform tiket (MalikaDesk), dan solusi layanan publik terintegrasi yang dirancang untuk era modern.",
+  keywords: ["Software House", "Sistem Antrean", "Aplikasi Web", "Layanan Publik", "Ticketing System", "IT Consultant", "QNext", "MalikaDesk"],
+  authors: [{ name: "MalikaTech" }],
+  creator: "MalikaTech",
+  openGraph: {
+    title: "MalikaTech | Solusi Digital Cerdas",
+    description: "Merekayasa mesin digital berkinerja tinggi untuk layanan publik modern.",
+    url: "https://malikatech.com", // Ganti dengan domain asli nanti
+    siteName: "MalikaTech",
+    locale: "id_ID",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MalikaTech | Solusi Digital Cerdas",
+    description: "Merekayasa mesin digital berkinerja tinggi untuk layanan publik modern.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# URL sitemap nanti bisa dimasukkan di sini jika Anda menggunakan domain sendiri
+# Sitemap: https://malikatech.com/sitemap.xml
