@@ -1,0 +1,181 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-inter), sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
+
+  /* Custom Color Palette — Saweria-inspired */
+  --color-on-secondary-container: #1a0a00;
+  --color-code-bg: #0d1117;
+  --color-surface-glass: rgba(13, 17, 23, 0.85);
+  --color-surface-container-lowest: #090c10;
+  --color-surface-container-highest: #2a2d35;
+  --color-surface-container: #161b22;
+  --color-tertiary-container: #0d2e2b;
+  --color-inverse-surface: #e8eaf0;
+  --color-on-background: #e8eaf0;
+  --color-outline: #8b949e;
+  --color-error: #f85149;
+  --color-surface-variant: #21262d;
+  --color-outline-variant: #30363d;
+  --color-on-surface-variant: #c9d1d9;
+  --color-on-tertiary-container: #2DC4B2;
+  --color-surface-tint: #c9d1d9;
+  --color-on-primary-fixed-variant: #3a4251;
+  --color-on-primary-fixed: #0d1117;
+  --color-tertiary-fixed-dim: #57dece;
+  /* Saweria teal */
+  --color-primary: #c9d1d9;
+  --color-on-secondary-fixed-variant: #7a3e00;
+  --color-on-error-container: #ffdad6;
+  --color-surface-bright: #2a2d35;
+  --color-inverse-on-surface: #21262d;
+  --color-on-secondary: #1a0a00;
+  --color-surface-dim: #0d1117;
+  --color-error-container: #6e1a1a;
+  --color-primary-container: #0d1117;
+  /* Saweria glow: orange */
+  --color-secondary-fixed-dim: #F7941D;
+  --color-on-tertiary-fixed-variant: #1a5f58;
+  --color-glow-orange: rgba(247, 148, 29, 0.25);
+  --color-secondary-fixed: #ffe4b8;
+  /* Saweria teal as tertiary */
+  --color-tertiary: #2DC4B2;
+  /* Saweria orange as secondary */
+  --color-secondary: #F7941D;
+  --color-border-muted: rgba(255, 255, 255, 0.08);
+  --color-on-primary: #21262d;
+  --color-surface: #0d1117;
+  --color-on-tertiary: #0a1f1e;
+  --color-on-surface: #e8eaf0;
+  --color-on-tertiary-fixed: #051312;
+  --color-on-error: #300000;
+  /* Saweria orange button */
+  --color-secondary-container: #F7941D;
+  --color-on-secondary-fixed: #1a0a00;
+  --color-primary-fixed: #e8eaf0;
+  --color-tertiary-fixed: #b6f0eb;
+  --color-on-primary-container: #8b949e;
+  --color-inverse-primary: #565e74;
+  --color-surface-container-low: #161b22;
+  --color-primary-fixed-dim: #c9d1d9;
+  --color-surface-container-high: #21262d;
+  /* Saweria dark bg */
+  --color-background: #0d1117;
+  /* Saweria pink accent */
+  --color-pink-accent: #FF4D8E;
+  --color-yellow-accent: #FFD400;
+
+  /* Custom Spacing */
+  --spacing-container-max: 1280px;
+  --spacing-margin-mobile: 16px;
+  --spacing-margin-desktop: 48px;
+  --spacing-gutter: 24px;
+  --spacing-base: 8px;
+}
+
+/* Custom font styles matching Tailwind configuration */
+@utility font-headline-lg {
+  font-family: var(--font-inter);
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+@utility font-body-md {
+  font-family: var(--font-inter);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+@utility font-headline-lg-mobile {
+  font-family: var(--font-inter);
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+@utility font-display-lg {
+  font-family: var(--font-inter);
+  font-size: 64px;
+  line-height: 72px;
+  letter-spacing: -0.04em;
+  font-weight: 700;
+}
+@utility font-label-mono {
+  font-family: var(--font-jetbrains-mono);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+@utility font-button {
+  font-family: var(--font-inter);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+}
+
+/* Custom interactive styles */
+.glass-card {
+  background: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  border-color: #F7941D;
+  box-shadow: 0 0 30px rgba(247, 148, 29, 0.2), 0 0 60px rgba(45, 196, 178, 0.08);
+  transform: translateY(-4px);
+}
+
+.glow-sphere {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(247, 148, 29, 0.18) 0%, rgba(45, 196, 178, 0.06) 50%, transparent 70%);
+  pointer-events: none;
+  filter: blur(60px);
+}
+
+.terminal-header {
+  background: #1e293b;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tech-stack-scroll {
+  animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
