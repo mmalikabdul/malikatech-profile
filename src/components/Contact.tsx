@@ -80,7 +80,7 @@ export default function Contact() {
 
         {/* Form Column */}
         <div className="fade-up visible glass-card p-8 md:p-10 rounded-3xl" style={{ transitionDelay: "200ms" }}>
-          <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit} className="space-y-6" id="contact-form">
+          <form name="contact" method="POST" onSubmit={handleSubmit} className="space-y-6" id="contact-form">
             <input type="hidden" name="form-name" value="contact" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
